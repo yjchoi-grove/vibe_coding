@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+.ql-container.ql-snow:focus-within {
+  border-color: #3b82f6 !important; /* Tailwind의 blue-500 */
+  box-shadow: 0 0 0 1.5px #3b82f6;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.quill-wrapper {
+  border: 1px solid #d1d5db; /* Tailwind의 border-gray-300 */
+  border-radius: 0.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.quill-wrapper:focus-within {
+  border-color: #3b82f6 !important; /* Tailwind의 blue-500 */
+  box-shadow: 0 0 0 1.5px #3b82f6;
+}
+.quill-wrapper.error {
+  border-color: #ef4444 !important; /* Tailwind의 red-500 */
+  box-shadow: 0 0 0 1.5px #ef4444;
+}
+.ql-container.ql-snow {
+  border: none !important;
+}
+
+/* 툴바와 본문 사이 경계선 제거 및 테두리 둥글기 통일 */
+.quill-wrapper .ql-toolbar.ql-snow {
+  border-bottom: 1px solid #e5e7eb !important; /* Tailwind의 gray-200 */
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.quill-wrapper .ql-container.ql-snow {
+  border: none !important;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent !important;
+}
+.quill-wrapper .ql-editor {
+  background: #fff;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
